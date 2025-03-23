@@ -9,7 +9,8 @@ public class TestSelenium_01 {
     public void test_Sample()
     {
         FirefoxDriver driver = new FirefoxDriver();
-        driver.get("https://www.google.com");
+        driver.get("file:///C:/Users/HP/Downloads/index.html");
+        System.out.println(driver.getTitle());
         driver.quit();
     }
 }
