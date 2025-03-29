@@ -26,13 +26,17 @@ public class TestSelenium_10_mini2 {
 
         Assert.assertTrue(driver.getCurrentUrl().contains("free-trial"));
 
+        WebElement email_txt_box=driver.findElement(By.xpath("//input[@id='page-v1-step1-email']"));
+        email_txt_box.sendKeys("jadfg");
 
+        driver.findElement(By.xpath("//input[@id='page-free-trial-step1-cu-gdpr-consent-checkbox']")).click();
 
+        driver.findElement(By.xpath("//button[text()='Create a Free Trial Account']")).click();
 
+        WebElement error_msg=driver.findElement(By.xpath("//div[text()='The email address you entered is incorrect.']"));
+        String text_msg=error_msg.getText();
 
-
-
-
+        Assert.assertEquals(text_msg,"The email address you entered is incorrect.");
         driver.quit();
 
 
