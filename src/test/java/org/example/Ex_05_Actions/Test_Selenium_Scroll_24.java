@@ -8,19 +8,21 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
-public class Test_Selenium_20 {
+public class Test_Selenium_Scroll_24 {
 
     @Test
-    public void test_Caps_selenium()
+    public void scroll_page()
     {
         WebDriver driver = new EdgeDriver();
         driver.manage().window().maximize();
-        driver.get("https://awesomeqa.com/practice.html");
+        driver.get("https://the-internet.herokuapp.com/drag_and_drop");
 
-        WebElement firstName=driver.findElement(By.name("firstname"));
 
+        WebElement fromA=driver.findElement(By.id("column-a"));
+        WebElement fromB = driver.findElement(By.id("column-b"));
         Actions actions = new Actions(driver);
-        actions.keyDown(Keys.SHIFT).sendKeys(firstName,"saurabh").keyUp(Keys.SHIFT).build().perform();
+        actions.dragAndDrop(fromA,fromB).build().perform();
+
 
 
     }

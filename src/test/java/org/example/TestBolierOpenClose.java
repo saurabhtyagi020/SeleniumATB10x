@@ -23,10 +23,10 @@ public class TestBolierOpenClose {
     public void closeBrowser()
     {
         try {
-            Thread.sleep(10000);
+            Thread.sleep(20000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        driver.quit();
+       driver.quit();
     }
 }
