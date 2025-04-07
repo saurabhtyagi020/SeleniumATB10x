@@ -15,27 +15,13 @@ public class Task_5Apr {
         WebDriver driver = new ChromeDriver();
         driver.get("https://app-automate.browserstack.com");
         driver.manage().window().maximize();
-        try {
-            Thread.sleep(30000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+
         WebElement businessMail=driver.findElement(By.id("user_email_login"));
         businessMail.sendKeys("saurabhtyagi1@rediffmail.com");
-        try {
-            Thread.sleep(30000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
 
         WebElement mailPass=driver.findElement(By.id("user_password"));
         mailPass.sendKeys("Test@1234");
 
-        try {
-            Thread.sleep(30000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
 
         driver.findElement(By.id("user_submit")).click();
 
