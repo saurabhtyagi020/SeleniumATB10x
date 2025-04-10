@@ -8,7 +8,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
-public class Test_SeleniumSpiceJet_20 {
+public class Test_Selenium_20 {
 
     @Test
     public void test_Caps_selenium()
