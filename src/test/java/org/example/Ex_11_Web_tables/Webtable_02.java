@@ -31,10 +31,15 @@ public class Webtable_02 {
         System.out.println(row);
         System.out.println(col);
 
-        for (int i = 0; i <row ; i++) {
+        for (int i = 2; i <row ; i++) {
 
+            for (int j = 1; j <col ; j++) {
+                String dynamicpath= first_part+i+second_part+j+third_part;
+
+                String data = driver.findElement(By.xpath(dynamicpath)).getText();
+                System.out.println(data);
+
+            }
         }
-
-
     }
 }
