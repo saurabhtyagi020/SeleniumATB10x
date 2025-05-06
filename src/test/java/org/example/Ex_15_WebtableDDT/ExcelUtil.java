@@ -1,18 +1,17 @@
-package org.example.Ex_13_DDT;
+package org.example.Ex_15_WebtableDDT;
 
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class ExcelUtil {
 
     static Workbook workbook;
     static Sheet sheet;
-    public static String path=System.getProperty("user.dir")+"/src/test/resources/Data Excel.xlsx";
+    public static String path=System.getProperty("user.dir")+"/src/test/resources/Data Excel 4Row.xlsx";
     public static Object[][] getDatafromexcel(String sheetname)
     {
         try {
